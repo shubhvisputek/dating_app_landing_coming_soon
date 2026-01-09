@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF--8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>connect4vibe - Coming Soon</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get ready for a new wave of social discovery. We're building a platform where genuine personalities and shared vibes create lasting connections.">
+    <meta name="keywords" content="social discovery, authentic connections, new friends, dating app, social network, connect4vibe">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <!-- TODO: Replace with your actual URL -->
+    <meta property="og:url" content="https://connect4vibe.com/"> 
+    <meta property="og:title" content="connect4vibe - Authentic Connections Are Coming Soon">
+    <meta property="og:description" content="A new wave of social discovery where genuine personalities and shared vibes create lasting connections.">
+    <!-- TODO: Replace with a URL to your preview image (e.g., a logo or banner) -->
+    <!-- <meta property="og:image" content="https://connect4vibe.com/social-preview.png"> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+     <!-- TODO: Replace with your actual URL -->
+    <meta property="twitter:url" content="https://connect4vibe.com/">
+    <meta property="twitter:title" content="connect4vibe - Authentic Connections Are Coming Soon">
+    <meta property="twitter:description" content="A new wave of social discovery where genuine personalities and shared vibes create lasting connections.">
+    <!-- TODO: Replace with a URL to your preview image (e.g., a logo or banner) -->
+    <!-- <meta property="twitter:image" content="https://connect4vibe.com/social-preview.png"> -->
+    
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1M9W1E8NSM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1M9W1E8NSM');
+    </script>
+
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.comcom/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -37,23 +72,111 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #94a3b8; 
       }
+
+      /* Simple fade-in animation to replace tailwindcss-animate plugin */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-in-up {
+        animation: fadeIn 0.5s ease-out forwards;
+        opacity: 0;
+      }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
-  }
-}
-</script>
-<!-- Add Babel Standalone for in-browser JSX & TSX transpilation -->
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
-  <body class="bg-dark text-slate-900 antialiased selection:bg-primary selection:text-white">
-    <div id="root"></div>
-    <!-- Changed type to "text/babel" to let Babel transpile it -->
-    <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
+  </head>
+  <body class="bg-dark text-white font-sans overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+    
+    <div class="min-h-screen">
+      <div class="absolute inset-0 bg-grid-slate-700/[0.05] bg-[bottom_1px_center] [mask-image:linear-gradient(to_bottom,transparent,white)]"></div>
+      <div class="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(50%_50%_at_50%_50%,white,transparent)]">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-dark"></div>
+      </div>
+
+      <main class="relative z-10 flex flex-col items-center justify-center p-4 md:p-8">
+        <header class="py-6">
+          <h1 class="text-3xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+            connect<span class="text-primary font-extrabold">4</span>vibe
+          </h1>
+        </header>
+
+        <section class="text-center max-w-4xl mx-auto mt-10 md:mt-20">
+          <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4 fade-in-up" style="animation-delay: 100ms;">
+            Authentic Connections Are <span class="text-primary">Coming Soon</span>
+          </h2>
+          <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-12 fade-in-up" style="animation-delay: 200ms;">
+            Get ready for a new wave of social discovery. We're building a platform where genuine personalities and shared vibes create lasting connections.
+          </p>
+
+          <div class="my-12 fade-in-up flex justify-center" style="animation-delay: 300ms;">
+            <div class="inline-flex items-center gap-3 rounded-full bg-white/10 px-8 py-4 border border-white/10">
+                <span class="text-4xl md:text-5xl font-bold text-white">60</span>
+                <span class="text-xl md:text-2xl text-slate-300 font-medium">days until launch</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-24 md:mt-32 max-w-7xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-white">What to Expect</h3>
+            <p class="text-slate-400 mt-2">The next generation of social features.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature Card 1 -->
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4 border border-primary/20 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">AI-Powered Matching</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Our advanced AI connects you with people you'll actually vibe with based on personality, interests, and communication style.</p>
+            </div>
+            <!-- Feature Card 2 -->
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4 border border-primary/20 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Verified Profiles</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Say goodbye to bots and fakes. Every profile is manually verified for authenticity to ensure a safe and trustworthy community.</p>
+            </div>
+            <!-- Feature Card 3 -->
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4 border border-primary/20 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Secure & Private Chat</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">End-to-end encrypted messaging ensures your conversations stay private, just between you and your connection.</p>
+            </div>
+            <!-- Feature Card 4 -->
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4 border border-primary/20 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Deep Profile Insights</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Go beyond pictures. Our profiles highlight personality traits, values, and lifestyle choices for a more holistic view.</p>
+            </div>
+            <!-- Feature Card 5 -->
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4 border border-primary/20 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Curated Community</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Join a community that values depth over quantity. Connect with inspiring individuals who are serious about making real connections.</p>
+            </div>
+            <!-- Feature Card 6 -->
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4 border border-primary/20 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Advanced Privacy Controls</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">You're in control. Manage your visibility, blur photos, and decide who gets to see your profile with our incognito mode.</p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="text-center py-12 mt-16 text-slate-500 text-sm">
+          <p>&copy; 2024 connect4vibe. All rights reserved.</p>
+        </footer>
+      </main>
+    </div>
+
   </body>
 </html>
