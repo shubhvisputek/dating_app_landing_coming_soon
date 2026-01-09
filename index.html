@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>connect4vibe - Coming Soon</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.comcom/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -48,9 +48,12 @@
   }
 }
 </script>
+<!-- Add Babel Standalone for in-browser JSX & TSX transpilation -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
   <body class="bg-dark text-slate-900 antialiased selection:bg-primary selection:text-white">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Changed type to "text/babel" to let Babel transpile it -->
+    <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
   </body>
 </html>
